@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashwin Kumar J | Software Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
@@ -22,11 +22,6 @@
       --accent: #60a5fa;
       --hover: #93c5fd;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg);
@@ -35,6 +30,15 @@
       padding: 40px;
       scroll-behavior: smooth;
     }
+    main section {
+      background: var(--box);
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      transition: background 0.5s ease;
+    }
     header {
       text-align: center;
       margin-bottom: 50px;
@@ -42,7 +46,7 @@
     header h1 {
       font-size: 3rem;
       color: var(--accent);
-      animation: fadeInDown 1s ease-out;
+      animation: fadeSlideIn 1s ease-out;
     }
     .title {
       font-size: 1.5rem;
@@ -60,15 +64,6 @@
       color: var(--hover);
       transform: scale(1.1);
     }
-    main section {
-      background: var(--box);
-      padding: 20px;
-      margin: 30px auto;
-      max-width: 900px;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-      transition: background 0.5s ease;
-    }
     h2 {
       font-size: 2rem;
       margin-bottom: 15px;
@@ -85,13 +80,6 @@
     ul li {
       margin-bottom: 10px;
       line-height: 1.7;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: underline;
-    }
-    a:hover {
-      color: var(--hover);
     }
     footer {
       text-align: center;
@@ -141,96 +129,94 @@
     input:checked + .slider:before {
       transform: translateX(24px);
     }
-    @keyframes fadeInDown {
+    @keyframes fadeSlideIn {
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-
-<div class="theme-toggle-wrapper">
-  <label class="switch">
-    <input type="checkbox" id="theme-toggle">
-    <span class="slider round"></span>
-  </label>
-</div>
-
-<header data-aos="fade-down">
-  <h1>Ashwin Kumar J</h1>
-  <p class="title">Software Developer</p>
-  <div class="links">
-    <a href="https://github.com/ashwinkumar2004" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/ashwinkumar-j-207528260" target="_blank">LinkedIn</a>
-    <a href="mailto:ashwinkumarj2004@gmail.com">Email</a>
+  <div class="theme-toggle-wrapper">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
   </div>
-</header>
 
-<main>
-  <section data-aos="fade-up">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>K.S.R College of Engineering</strong><br/>BE in Computer Science and Engineering (2021 – 2025)</li>
-    </ul>
-  </section>
+  <header data-aos="fade-down">
+    <h1>Ashwin Kumar J</h1>
+    <p class="title">Software Developer</p>
+    <div class="links">
+      <a href="https://github.com/ashwinkumar2004" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/ashwinkumar2004/" target="_blank">LinkedIn</a>
+      <a href="mailto:ashwinkumarj2004@gmail.com">Email</a>
+    </div>
+  </header>
 
-  <section data-aos="fade-up">
-    <h2>Internships</h2>
-    <h3>Java Programming Intern – Code Alpha (May 2025 – Jun 2025)</h3>
-    <ul>
-      <li>Developed Time Table Generator with efficient slot management</li>
-    </ul>
-  </section>
+  <main>
+    <section data-aos="fade-up">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>K.S.R College of Engineering</strong><br/>BE in Computer Science and Engineering (2021 – 2025)</li>
+      </ul>
+    </section>
 
-  <section data-aos="fade-up">
-    <h2>Projects</h2>
-    <h3>IoT Based Smart Street Light System</h3>
-    <ul>
-      <li>Used NodeMCU and sensors for smart energy saving</li>
-    </ul>
-  </section>
+    <section data-aos="fade-left">
+      <h2>Internships</h2>
+      <h3>Java Programming Intern – Code Alpha (May 2025 – Jun 2025)</h3>
+      <ul>
+        <li>Developed Time Table Generator with efficient slot management</li>
+      </ul>
+    </section>
 
-  <section data-aos="fade-up">
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> C, Java, Python, SQL</p>
-    <p><strong>Tools:</strong> Eclipse, MySQL, Arduino</p>
-  </section>
+    <section data-aos="fade-right">
+      <h2>Projects</h2>
+      <h3>Smart Street Light System</h3>
+      <ul>
+        <li>Presented at Expo; designed to reduce energy consumption based on real-time detection</li>
+      </ul>
+    </section>
 
-  <section data-aos="fade-up">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Cybersecurity – IBM SkillsBuild</li>
-      <li>Python & AI – GUVI (IITM Research Park)</li>
-      <li>Web Development – Great Learning</li>
-    </ul>
-  </section>
+    <section data-aos="zoom-in">
+      <h2>Technical Skills</h2>
+      <p><strong>Languages:</strong> Java, C, Python, SQL</p>
+      <p><strong>Web Technologies:</strong> HTML, CSS, JavaScript</p>
+      <p><strong>Tools & Platforms:</strong> GitHub, VS Code, MySQL</p>
+    </section>
 
-  <section data-aos="fade-up">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Presented Smart Street Light project in Expo Event</li>
-    </ul>
-  </section>
+    <section data-aos="flip-left">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Infosys Springboard – Java Programming</li>
+        <li>Ethical Hacking Fundamentals – MyCaptain</li>
+      </ul>
+    </section>
 
-  <section data-aos="fade-up" id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:ashwinkumarj2004@gmail.com">ashwinkumarj2004@gmail.com</a></p>
-  </section>
-</main>
+    <section data-aos="flip-right">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Presented Smart Street Light project in Expo Event</li>
+      </ul>
+    </section>
 
-<footer data-aos="fade-in">
-  <p>© 2025 Ashwin Kumar J. All rights reserved.</p>
-</footer>
+    <section data-aos="fade-up" id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ashwinkumarj2004@gmail.com">ashwinkumarj2004@gmail.com</a></p>
+    </section>
+  </main>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-  const toggleBtn = document.getElementById('theme-toggle');
-  const body = document.body;
-  toggleBtn.addEventListener('change', () => {
-    body.classList.toggle('dark');
-  });
-</script>
+  <footer data-aos="fade-in">
+    <p>© 2025 Ashwin Kumar J. All rights reserved.</p>
+  </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    toggleBtn.addEventListener('change', () => {
+      body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
